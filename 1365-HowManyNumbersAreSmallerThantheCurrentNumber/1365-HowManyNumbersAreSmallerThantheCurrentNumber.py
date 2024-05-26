@@ -1,13 +1,13 @@
-        for i in range(len(nums)):
-            for j in range(len(nums)):
-
-                if j != i and nums[j]<nums[i]:
-
-            count = 0
-                    count+=1
-            
-            result.append(count)
+            if sorted_nums[i+1] < curr_num:
+                remaining_val = len(sorted_nums) - (i+1)
+                dict[curr_num] = remaining_val
         
+        dict[sorted_nums[-1]] = 0
+
         result = []
-        count = 0
+        for num in nums:
+            result.append(dict[num])
+
+        return result
+
 [
