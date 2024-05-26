@@ -1,10 +1,14 @@
-class Solution:
-    def search(self, nums: List[int], target: int) -> int:
 
-        for i, nums in enumerate(nums):
-            if nums == target:
-                return i
-        
-        return -1
-        
+            if num == target:
+            mid = (start + end)//2
+            num = nums[mid]
+                return mid
+            
+            if num < target:
+                start = mid + 1
+
+            if num > target:
+                end = mid - 1
+
+        return -1        
 [
